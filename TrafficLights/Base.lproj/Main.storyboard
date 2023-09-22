@@ -21,6 +21,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="trafficLightButtonSwitch" destination="BYZ-38-t0r" eventType="touchUpInside" id="jSG-av-NYr"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bfd-Y9-5ue">
                                 <rect key="frame" x="97" y="59" width="198" height="198"/>
@@ -41,6 +44,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="greenView" destination="IfX-de-sCa" id="BDc-kn-IFD"/>
+                        <outlet property="redView" destination="8bC-Xf-vdC" id="CWj-ZN-OBm"/>
+                        <outlet property="trafficLightButton" destination="gLa-xg-79c" id="fvS-7K-hE4"/>
+                        <outlet property="yellowView" destination="Lpb-dw-OAV" id="BGF-kl-MU8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

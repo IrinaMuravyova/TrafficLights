@@ -16,9 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gLa-xg-79c">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gLa-xg-79c">
                                 <rect key="frame" x="159" y="743" width="75" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
@@ -36,17 +35,21 @@
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IfX-de-sCa">
-                                <rect key="frame" x="97" y="504" width="198" height="198"/>
+                                <rect key="frame" x="97" y="503" width="198" height="198"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gLa-xg-79c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="159" id="DWL-f6-LKx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gLa-xg-79c" secondAttribute="bottom" constant="40" id="sCP-rr-WvC"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="greenView" destination="IfX-de-sCa" id="BDc-kn-IFD"/>
-                        <outlet property="redView" destination="8bC-Xf-vdC" id="CWj-ZN-OBm"/>
+                        <outlet property="redView" destination="Bfd-Y9-5ue" id="W7g-C9-oRV"/>
                         <outlet property="trafficLightButton" destination="gLa-xg-79c" id="fvS-7K-hE4"/>
                         <outlet property="yellowView" destination="Lpb-dw-OAV" id="BGF-kl-MU8"/>
                     </connections>

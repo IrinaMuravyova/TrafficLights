@@ -8,6 +8,13 @@
 import UIKit
 
 class ViewController: UIViewController {
+    enum LightsColors {
+        case red
+        case yellow
+        case green
+    }
+    
+    var nextLight = LightsColors.red
     
     @IBOutlet var redView: UIView!
     
@@ -32,6 +39,21 @@ class ViewController: UIViewController {
     }
 
     @IBAction func trafficLightButtonSwitch() {
+        trafficLightButton.titleLabel?.text = "NEXT"
+        switch nextLight {
+        case .red:
+            greenView.alpha = 0.3
+            redView.alpha = 1
+            nextLight = LightsColors.yellow
+        case .yellow:
+            redView.alpha = 0.3
+            yellowView.alpha = 1
+            nextLight = LightsColors.green
+        case .green:
+            yellowView.alpha = 0.3
+            greenView.alpha = 1
+            nextLight = LightsColors.red
+        }
     }
     
 }

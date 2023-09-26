@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,38 +13,55 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TrafficLights" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lpb-dw-OAV">
+                                <rect key="frame" x="106.5" y="304" width="201" height="201.5"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Lpb-dw-OAV" secondAttribute="height" multiplier="1:1" id="WQT-DM-r6x"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IfX-de-sCa">
+                                <rect key="frame" x="106.5" y="530.5" width="201" height="201"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="IfX-de-sCa" secondAttribute="height" multiplier="1:1" id="kIJ-u7-OcC"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bfd-Y9-5ue">
+                                <rect key="frame" x="106.5" y="78" width="201" height="201"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Bfd-Y9-5ue" secondAttribute="height" multiplier="1:1" id="aIf-yd-dIg"/>
+                                </constraints>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gLa-xg-79c">
-                                <rect key="frame" x="159" y="743" width="75" height="35"/>
+                                <rect key="frame" x="177.5" y="770" width="59" height="28"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button">
+                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="trafficLightButtonSwitch" destination="BYZ-38-t0r" eventType="touchUpInside" id="jSG-av-NYr"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bfd-Y9-5ue">
-                                <rect key="frame" x="97" y="59" width="198" height="198"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemRedColor"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lpb-dw-OAV">
-                                <rect key="frame" x="97" y="281" width="198" height="198"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IfX-de-sCa">
-                                <rect key="frame" x="97" y="503" width="198" height="198"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
-                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="gLa-xg-79c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="159" id="DWL-f6-LKx"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gLa-xg-79c" secondAttribute="bottom" constant="40" id="sCP-rr-WvC"/>
+                            <constraint firstItem="Bfd-Y9-5ue" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="5dJ-3l-8sv"/>
+                            <constraint firstItem="IfX-de-sCa" firstAttribute="top" secondItem="Lpb-dw-OAV" secondAttribute="bottom" constant="25" id="6Mk-B0-Aqy"/>
+                            <constraint firstItem="Lpb-dw-OAV" firstAttribute="height" secondItem="Bfd-Y9-5ue" secondAttribute="height" id="BbQ-kJ-4ix"/>
+                            <constraint firstItem="Bfd-Y9-5ue" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.22457" id="JhZ-Do-PWO"/>
+                            <constraint firstItem="Lpb-dw-OAV" firstAttribute="top" secondItem="Bfd-Y9-5ue" secondAttribute="bottom" constant="25" id="cgh-Y6-Cel"/>
+                            <constraint firstItem="Bfd-Y9-5ue" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gQl-Ry-3e8"/>
+                            <constraint firstItem="gLa-xg-79c" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mPA-db-o8Q"/>
+                            <constraint firstItem="IfX-de-sCa" firstAttribute="centerX" secondItem="Lpb-dw-OAV" secondAttribute="centerX" id="mpw-mt-4Mr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gLa-xg-79c" secondAttribute="bottom" multiplier="1.08" id="ott-PM-LEY"/>
+                            <constraint firstItem="IfX-de-sCa" firstAttribute="height" secondItem="Lpb-dw-OAV" secondAttribute="height" id="plI-40-geF"/>
+                            <constraint firstItem="Lpb-dw-OAV" firstAttribute="centerX" secondItem="Bfd-Y9-5ue" secondAttribute="centerX" id="pt5-l1-6H8"/>
                         </constraints>
                     </view>
                     <connections>
@@ -56,7 +73,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-42" y="4"/>
+            <point key="canvasLocation" x="-45.038167938931295" y="2.8169014084507045"/>
         </scene>
     </scenes>
     <resources>

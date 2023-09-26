@@ -35,11 +35,14 @@ class ViewController: UIViewController {
         yellowView.alpha = 0.3
         greenView.alpha = 0.3
         
-        trafficLightButton.titleLabel?.text = "START"
+        
+        trafficLightButton.setTitle("START", for: .normal)
     }
 
     @IBAction func trafficLightButtonSwitch() {
-        trafficLightButton.titleLabel?.text = "NEXT"
+        
+        
+        
         switch nextLight {
         case .red:
             greenView.alpha = 0.3
@@ -54,6 +57,8 @@ class ViewController: UIViewController {
             greenView.alpha = 1
             nextLight = LightsColors.red
         }
+        
+        trafficLightButton.setTitle("NEXT", for: .normal)
     }
     
 }

@@ -41,7 +41,7 @@
 Для переключения сигналов светофора используйте кнопку со стилем Default
 Скруглить углы у кнопки
 
-![screenshot of sample](https://i.ibb.co/27SpVzK/Traffic-Lights.jpg)
+![screenshot of sample](https://i.ibb.co/XCN3NTJ/traffic-tlghts.png)
 
 ## Documentation
 

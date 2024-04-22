@@ -24,12 +24,14 @@ class ViewController: UIViewController {
     
     @IBOutlet var trafficLightButton: UIButton!
     
+    override func viewWillLayoutSubviews() {
+        redView.layer.cornerRadius = redView.frame.height/2
+        yellowView.layer.cornerRadius = yellowView.frame.height/2
+        greenView.layer.cornerRadius = greenView.frame.height/2
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        redView.layer.cornerRadius = 100
-        yellowView.layer.cornerRadius = 100
-        greenView.layer.cornerRadius = 100
         
         redView.alpha = 0.3
         yellowView.alpha = 0.3
